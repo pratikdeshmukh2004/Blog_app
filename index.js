@@ -3,6 +3,7 @@ const app = express()
 const  {router} = require("./router/routes")
 app.use(express.json())
 app.use("/",router)
-app.listen(6000,()=>{
-    console.log("listining");
+const port = process.env.PORT || 6000
+app.listen(port,()=>{
+    console.log("listining", port);
 })
